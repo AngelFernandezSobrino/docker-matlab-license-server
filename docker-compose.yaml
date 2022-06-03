@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  licences:
+    build: .
+    restart: unless-stopped
+    hostname: matlab-license-manager
+    mac_address: {{}}
+    ports:
+      - "27000:27000"
+      - "27001:27001"
