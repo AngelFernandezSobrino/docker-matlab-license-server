@@ -18,6 +18,6 @@ ENV MLM_PORT=27001
 EXPOSE $LMGRD_PORT
 EXPOSE $MLM_PORT
 
-COPY ./license.dat /etc/lmgrd/licenses
+# COPY ./licenses/license.dat /etc/lmgrd/licenses
 
 ENTRYPOINT ["/lmgrd/etc/glnxa64/lmgrd", "-z", "-c", "/etc/lmgrd/licenses"]

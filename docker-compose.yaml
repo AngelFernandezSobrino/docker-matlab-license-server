@@ -4,8 +4,10 @@ services:
   licences:
     build: .
     restart: unless-stopped
-    hostname: matlab-license-manager
-    mac_address: {{}}
+    hostname: {{SERVER_HOSTNAME}}
+    mac_address: {{SERVER_MAC_ADDRESS}}
     ports:
       - "27000:27000"
       - "27001:27001"
+    volumes:
+      - "./licenses/:/etc/lmgrd/licenses/"
